@@ -1,168 +1,240 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- CSS 불러오기 -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+<head>
+	<title>My Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-	<body class="is-preload">
+<body class="is-preload">
 
-		<!-- ================== 전체 Wrapper ================== -->
-		<div id="wrapper">
+	<!-- ================== 전체 Wrapper ================== -->
+	<div id="wrapper">
 
-			<!-- ================== 헤더 영역 ================== -->
-			<header id="header" class="alt">
-				<!-- 로고 (원하면 본인 프로필 사진이나 심볼로 교체) -->
-				<span class="logo"><img src="images/logo.svg" alt="My Logo" /></span>
-				
-				<!-- 이름/간단한 소개 -->
-				<h1>홍길동</h1>
-				<p>
-					프론트엔드 & 백엔드 개발자<br />
-					사용자 친화적인 서비스를 만드는 사람
-				</p>
-			</header>
-			<!-- ============================================= -->
+		<!-- ================== 헤더 영역 ================== -->
+		<header id="header" class="alt">
+			<!-- 로고 (원하면 본인 프로필 사진이나 심볼로 교체) -->
+			<span class="logo"><img src="images/logo.svg" alt="My Logo" /></span>
 
-			<!-- ================== 네비게이션 메뉴 ================== -->
-			<nav id="nav">
-				<ul>
-					<li><a href="#intro" class="active">About Me</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#skills">Skills & Stats</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-			<!-- ============================================= -->
+			<!-- 이름/간단한 소개 -->
+			<h1>양혜원</h1>
+			<p>
+				FullStack을 향해 달려가는<br />
+				사용자 중심의 경험을 설계하는 FE 개발자
+			</p>
+		</header>
+		<!-- ============================================= -->
 
-			<!-- ================== 메인 콘텐츠 ================== -->
-			<div id="main">
+		<!-- ================== 네비게이션 메뉴 ================== -->
+		<nav id="nav">
+			<ul>
+				<li><a href="#intro" class="active">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills & Stats</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<!-- ============================================= -->
 
-				<!-- ===== About Me ===== -->
-				<section id="intro" class="main">
-					<div class="spotlight">
-						<div class="content">
-							<header class="major">
-								<h2>About Me</h2>
-							</header>
-							<p>
-								안녕하세요! 저는 웹 개발자 홍길동입니다.<br />
-								React, Node.js, AWS 기반 프로젝트 경험이 있으며<br />
-								사용자 경험을 최우선으로 생각합니다.
-							</p>
-						</div>
-						<!-- 프로필 사진 -->
-						<span class="image"><img src="images/profile.jpg" alt="Profile" /></span>
+		<!-- ================== 메인 콘텐츠 ================== -->
+		<div id="main">
+
+			<!-- ===== About Me ===== -->
+			<section id="intro" class="main">
+				<div class="spotlight">
+					<div class="content">
+						<header class="major">
+							<h2>About Me</h2>
+						</header>
+						<p>
+							안녕하세요! 저는 사용자 경험을 최우선으로 생각하는 25살 주니어 풀스택 개발자 양혜원입니다.<br />
+							프론트엔드 기술인 React와 Tailwind를 비롯하여, 백엔드에서의 API 설계 및 서버와 클라이언트 간 데이터 흐름을 이해하고 있습니다.<br />
+							저는 웹 개발을 통해 사용자 중심의 서비스를 설계하고, 기술적으로 확장 가능한 시스템을 구축하는 데 주력하고 있습니다.
+						</p>
 					</div>
-				</section>
+					<!-- 프로필 사진 -->
+					<span class="image"><img src="images/profile.jpg" alt="Profile" /></span>
+				</div>
+			</section>
 
-				<!-- ===== Projects ===== -->
-				<section id="projects" class="main special">
-					<header class="major">
-						<h2>Projects</h2>
-					</header>
-					<ul class="features">
-						<li>
-							<span class="icon solid major style1 fa-code"></span>
-							<h3>포트폴리오 웹사이트</h3>
-							<p>React & AWS 기반으로 제작한 개인 포트폴리오</p>
-						</li>
-						<li>
-							<span class="icon major style3 fa-copy"></span>
-							<h3>To-Do App</h3>
-							<p>Node.js & MongoDB로 만든 할일 관리 애플리케이션</p>
-						</li>
-						<li>
-							<span class="icon major style5 fa-gem"></span>
-							<h3>데이터 시각화 대시보드</h3>
-							<p>Python Flask + D3.js를 활용한 데이터 분석 웹앱</p>
-						</li>
+			<!-- ===== Projects ===== -->
+			<section id="projects" class="main special">
+				<header class="major">
+					<h2>Projects</h2>
+				</header>
+
+				<div class="projects-container">
+					<div class="project-card">
+						<img src="images/mockView.png" alt="모의면접 플랫폼" class="project-image" />
+						<h3><span class="bold-text">모의면접 플랫폼:</span></h3>
+						<p>React와 Tailwind: 백엔드와 협업하여 사용자 인터페이스 설계 및 REST API 연동을 담당했습니다.</p>
+					</div>
+
+					<div class="project-card">
+						<img src="images/fooding.png" alt="가게 리뷰 관리 시스템" class="project-image" />
+						<h3><span class="bold-text">가게 리뷰 관리 시스템:</span></h3>
+						<p>Node.js와 MySQL: 백엔드 API 설계와 데이터베이스 구조 설계를 통해 효율적인 데이터 관리를 구현했습니다.</p>
+					</div>
+
+					<div class="project-card">
+						<img src="images/name.png" alt="To-Do App" class="project-image" />
+						<h3><span class="bold-text">한국성명학학회:</span></h3>
+						<p>React 랜딩 페이지: 컴포넌트 기반 개발과 반응형 디자인으로 유지보수성과 사용자 경험을 개선하고, Tailwind CSS로 간결한 스타일링을 적용했습니다.</p>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- ===== Skills & Stats ===== -->
+			<section id="skills" class="main special">
+				<header class="major">
+					<h2>Skills & Stats</h2>
+					<p>제가 다룰 수 있는 기술과 성과입니다.</p>
+				</header>
+				<ul class="statistics">
+					<li class="style1">
+						<span class="icon solid fa-code-branch"></span>
+						<strong>1+ Years Experience</strong>
+					</li>
+					<li class="style2">
+						<span class="icon fa-folder-open"></span>
+						<strong>10+ Projects</strong>
+					</li>
+					<li class="style3">
+						<span class="icon solid fa-signal"></span>
+						<strong>100%</strong> Passion for Tech
+					</li>
+					<li class="style4">
+						<span class="icon solid fa-laptop"></span>
+						<strong>Frontend</strong> React, Tailwind CSS, Vue.js
+					</li>
+					<li class="style5">
+						<span class="icon fa-gem"></span>
+						<strong>Backend</strong> Node.js, Nest.js, Spring Boot, MySQL
+					</li>
+				</ul>
+			</section>
+
+
+
+			<!-- ===== Contact ===== -->
+			<section id="contact" class="main special">
+				<header class="major">
+					<h2>Contact Me</h2>
+					<p>협업이나 채용 관련 문의는 언제든 환영합니다.</p>
+				</header>
+				<footer class="major">
+					<ul class="actions special">
+						<!-- 클릭 시 이메일을 중앙에 띄우는 버튼 -->
+						<li><a href="javascript:void(0);" onclick="showEmail()" class="button primary">Email Me</a></li>
+						<li><a href="https://god-newbie.tistory.com/" class="button">GitHub</a></li>
 					</ul>
-				</section>
+				</footer>
+			</section>
 
-				<!-- ===== Skills & Stats ===== -->
-				<section id="skills" class="main special">
-					<header class="major">
-						<h2>Skills & Stats</h2>
-						<p>제가 다룰 수 있는 기술과 성과입니다.</p>
-					</header>
-					<ul class="statistics">
-						<li class="style1">
-							<span class="icon solid fa-code-branch"></span>
-							<strong>5+</strong> Years Experience
-						</li>
-						<li class="style2">
-							<span class="icon fa-folder-open"></span>
-							<strong>20+</strong> Projects
-						</li>
-						<li class="style3">
-							<span class="icon solid fa-signal"></span>
-							<strong>100%</strong> Passion
-						</li>
-						<li class="style4">
-							<span class="icon solid fa-laptop"></span>
-							<strong>Frontend</strong> React, Vue
-						</li>
-						<li class="style5">
-							<span class="icon fa-gem"></span>
-							<strong>Backend</strong> Node, Python
-						</li>
-					</ul>
-				</section>
-
-				<!-- ===== Contact ===== -->
-				<section id="contact" class="main special">
-					<header class="major">
-						<h2>Contact Me</h2>
-						<p>협업이나 채용 관련 문의는 언제든 환영합니다.</p>
-					</header>
-					<footer class="major">
-						<ul class="actions special">
-							<li><a href="mailto:myemail@example.com" class="button primary">Email Me</a></li>
-							<li><a href="https://github.com/mygithub" class="button">GitHub</a></li>
-						</ul>
-					</footer>
-				</section>
-
+			<!-- 이메일 알림창 스타일링 -->
+			<div id="emailModal" class="email-modal">
+				<div class="email-modal-content">
+					<!-- 닫기 버튼 -->
+					<span class="close-btn" onclick="closeEmailModal()">&times;</span>
+					<!-- 이메일 내용 -->
+					<div class="email-text">
+						<p>Email: <strong>puaiyoon@gmail.com</strong></p>
+					</div>
+				</div>
 			</div>
-			<!-- ============================================= -->
 
-			<!-- ================== 푸터 영역 ================== -->
-			<footer id="footer">
-				<section>
-					<h2>Thanks for Visiting!</h2>
-					<p>저의 포트폴리오 웹사이트를 방문해주셔서 감사합니다 :)</p>
-				</section>
-				<section>
-					<h2>Follow Me</h2>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</section>
-				<p class="copyright">
-					&copy; 2025 홍길동. All rights reserved.
-				</p>
-			</footer>
-			<!-- ============================================= -->
+			<!-- 이메일 모달 띄우는 자바스크립트 함수 -->
+			<script>
+				// 이메일 모달 띄우는 함수
+				function showEmail() {
+					var modal = document.getElementById("emailModal");
+					modal.style.display = "flex";  // 모달을 보이게 설정
+					modal.style.opacity = 1;  // 투명도를 1로 설정
+					modal.style.visibility = "visible";  // 가시성 보이도록 설정
+				}
+
+				// 이메일 모달 닫는 함수
+				function closeEmailModal() {
+					var modal = document.getElementById("emailModal");
+					modal.style.display = "none";  // 모달을 숨김
+					modal.style.opacity = 0;  // 투명도를 0으로 설정
+					modal.style.visibility = "hidden";  // 가시성 숨김
+				}
+
+				// ESC 키로 모달 닫기
+				document.addEventListener("keydown", function (event) {
+					if (event.key === "Escape") {
+						closeEmailModal();
+					}
+				});
+			</script>
+
+
+
+
+
+
+
+
+
+
 
 		</div>
+		<!-- ============================================= -->
 
-		<!-- ================== JS 스크립트 ================== -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+		<!-- ================== 푸터 영역 ================== -->
+		<footer id="footer">
+			<section>
+				<h2>Thanks for Visiting!</h2>
+				<p>저의 포트폴리오 웹사이트를 방문해주셔서 감사합니다 :)</p>
+			</section>
+			<section>
+				<h2>Follow Me</h2>
+				<ul class="icons">
+					<li><a href="https://github.com/Yanghewon" class="icon">
+							<div class="icon-circle">
+								<img src="images/github-logo.png" alt="GitHub" />
+							</div>
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+					<li><a href="https://god-newbie.tistory.com/" class="icon">
+							<div class="icon-circle">
+								<img src="images/tistory-logo2.png" alt="Tistory" />
+							</div>
+							<span class="label">Tistory</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+
+
+
+
+			<p class="copyright">
+				&copy; 2025 YangHyewon. All rights reserved.
+			</p>
+		</footer>
+		<!-- ============================================= -->
+
+	</div>
+
+	<!-- ================== JS 스크립트 ================== -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
 </html>
