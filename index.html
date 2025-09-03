@@ -30,6 +30,7 @@
 		</header>
 		<!-- ============================================= -->
 
+
 		<!-- ================== 네비게이션 메뉴 ================== -->
 		<nav id="nav">
 			<ul>
@@ -44,6 +45,7 @@
 		<!-- ================== 메인 콘텐츠 ================== -->
 		<div id="main">
 
+			<!-- ===== About Me ===== -->
 			<!-- ===== About Me ===== -->
 			<section id="intro" class="main">
 				<div class="spotlight">
@@ -60,7 +62,42 @@
 					<!-- 프로필 사진 -->
 					<span class="image"><img src="images/profile.jpg" alt="Profile" /></span>
 				</div>
+
+				<!-- 블로그 배지 -->
+				<p class="blog-badge">
+					<a href="https://god-newbie.tistory.com/" target="_blank">
+						📚 Tistory 개발 블로그 바로가기
+					</a>
+				</p>
 			</section>
+
+			<!-- CSS -->
+			<style>
+				/* 블로그 배지 위치 조정 */
+				.blog-badge {
+					margin-top: -30px;
+					/* 위쪽으로 더 올리기 */
+					text-align: left;
+				}
+
+				.blog-badge a {
+					display: inline-block;
+					padding: .4rem .9rem;
+					border: 1px solid #ddd;
+					border-radius: 999px;
+					font-size: .9rem;
+					text-decoration: none;
+					background: #fff;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+
+				/* 마우스 올렸을 때 효과 */
+				.blog-badge a:hover {
+					transform: translateY(-4px) scale(1.05);
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+				}
+			</style>
+
 
 			<!-- ===== Projects ===== -->
 			<section id="projects" class="main special">
@@ -81,10 +118,17 @@
 						<p>Node.js와 MySQL: 백엔드 API 설계와 데이터베이스 구조 설계를 통해 효율적인 데이터 관리를 구현했습니다.</p>
 					</div>
 
-					<div class="project-card">
-						<img src="images/name.png" alt="To-Do App" class="project-image" />
+					<div class="project-card project-knsa">
+						<img src="images/name.png" alt="한국성명학학회" class="project-image" />
 						<h3><span class="bold-text">한국성명학학회:</span></h3>
-						<p>React 랜딩 페이지: 컴포넌트 기반 개발과 반응형 디자인으로 유지보수성과 사용자 경험을 개선하고, Tailwind CSS로 간결한 스타일링을 적용했습니다.</p>
+						<p>
+							React 랜딩 페이지: 컴포넌트 기반 개발과 반응형 디자인으로 유지보수성과 사용자 경험을 개선하고, Tailwind CSS로 간결한 스타일링을 적용했습니다.
+						</p>
+
+						<!-- 우측 하단 버튼 -->
+						<a href="https://www.knsa.or.kr/" target="_blank" class="project-btn">
+							보러가기
+						</a>
 					</div>
 				</div>
 			</section>
@@ -97,29 +141,83 @@
 					<h2>Skills & Stats</h2>
 					<p>제가 다룰 수 있는 기술과 성과입니다.</p>
 				</header>
-				<ul class="statistics">
-					<li class="style1">
-						<span class="icon solid fa-code-branch"></span>
-						<strong>1+ Years Experience</strong>
-					</li>
-					<li class="style2">
-						<span class="icon fa-folder-open"></span>
-						<strong>10+ Projects</strong>
-					</li>
-					<li class="style3">
-						<span class="icon solid fa-signal"></span>
-						<strong>100%</strong> Passion for Tech
-					</li>
-					<li class="style4">
-						<span class="icon solid fa-laptop"></span>
-						<strong>Frontend</strong> React, Tailwind CSS, Vue.js
-					</li>
-					<li class="style5">
-						<span class="icon fa-gem"></span>
-						<strong>Backend</strong> Node.js, Nest.js, Spring Boot, MySQL
-					</li>
-				</ul>
+
+				<div class="skills-grid">
+					<div class="skill-item">
+						<img src="images/mariaDB.png" alt="MariaDB" />
+						<p>MariaDB</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/tailwindcss.png" alt="TailwindCSS" />
+						<p>TailwindCSS</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/axios.png" alt="Axios" />
+						<p>Axios</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/react.png" alt="React" />
+						<p>React</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/Spring Data JPA.png" alt="Spring Data JPA" />
+						<p>Spring Data JPA</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/react router.png" alt="React Router" />
+						<p>React Router</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/notion.png" alt="Notion" />
+						<p>Notion</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/figma.png" alt="Figma" />
+						<p>Figma</p>
+					</div>
+					<div class="skill-item">
+						<img src="images/swagger.png" alt="Swagger" />
+						<p>Swagger</p>
+					</div>
+				</div>
 			</section>
+
+			<!-- CSS -->
+			<style>
+				.skills-grid {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+					gap: 30px;
+					justify-items: center;
+					align-items: center;
+					margin-top: 40px;
+				}
+
+				.skill-item {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				.skill-item img {
+					width: 80px;
+					height: 80px;
+					object-fit: contain;
+					transition: transform 0.3s ease;
+				}
+
+				.skill-item img:hover {
+					transform: scale(1.15);
+				}
+
+				.skill-item p {
+					margin-top: 10px;
+					font-weight: 600;
+					font-size: 0.95rem;
+				}
+			</style>
+
 
 
 
@@ -132,47 +230,52 @@
 				<footer class="major">
 					<ul class="actions special">
 						<!-- 클릭 시 이메일을 중앙에 띄우는 버튼 -->
-						<li><a href="javascript:void(0);" onclick="showEmail()" class="button primary">Email Me</a></li>
-						<li><a href="https://god-newbie.tistory.com/" class="button">GitHub</a></li>
+						<li><a href="javascript:void(0);" onclick="showEmail()" class="button primary"><strong>Email</strong></a></li>
+						<li><a href="https://github.com/Yanghewon" class="button"><strong>GitHub</strong></a></li>
 					</ul>
 				</footer>
 			</section>
 
-			<!-- 이메일 알림창 스타일링 -->
+			<!-- 이메일 모달 -->
+			<!-- 이메일 모달 -->
 			<div id="emailModal" class="email-modal">
 				<div class="email-modal-content">
 					<!-- 닫기 버튼 -->
 					<span class="close-btn" onclick="closeEmailModal()">&times;</span>
+
 					<!-- 이메일 내용 -->
 					<div class="email-text">
-						<p>Email: <strong>puaiyoon@gmail.com</strong></p>
+						<p><strong>Email:</strong></p>
+						<p>puaiyoon@gmail.com</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- 이메일 모달 띄우는 자바스크립트 함수 -->
+
 			<script>
-				// 이메일 모달 띄우는 함수
+				const modal = document.getElementById("emailModal");
+
+				// 이메일 모달 열기
 				function showEmail() {
-					var modal = document.getElementById("emailModal");
-					modal.style.display = "flex";  // 모달을 보이게 설정
-					modal.style.opacity = 1;  // 투명도를 1로 설정
-					modal.style.visibility = "visible";  // 가시성 보이도록 설정
+					// 모달이 열려있어도 다시 트리거 시 재시작
+					modal.classList.remove("show");
+					void modal.offsetWidth; // 강제로 reflow → 애니메이션 다시 적용
+					modal.classList.add("show");
 				}
 
-				// 이메일 모달 닫는 함수
+				// 이메일 모달 닫기
 				function closeEmailModal() {
-					var modal = document.getElementById("emailModal");
-					modal.style.display = "none";  // 모달을 숨김
-					modal.style.opacity = 0;  // 투명도를 0으로 설정
-					modal.style.visibility = "hidden";  // 가시성 숨김
+					modal.classList.remove("show");
 				}
 
 				// ESC 키로 모달 닫기
 				document.addEventListener("keydown", function (event) {
-					if (event.key === "Escape") {
-						closeEmailModal();
-					}
+					if (event.key === "Escape") closeEmailModal();
+				});
+
+				// 배경 클릭 시 닫기
+				modal.addEventListener("click", function (e) {
+					if (e.target === this) closeEmailModal();
 				});
 			</script>
 
