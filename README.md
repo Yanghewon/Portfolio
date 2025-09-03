@@ -27,16 +27,3 @@
 | **React**, TailwindCSS, Vanilla JS, HTML5, CSS3 | Figma | Git, GitHub, Notion |
 
 ---
-
-## 🚀 시작하기
-이 포트폴리오를 로컬에서 실행하려면 다음 단계를 따라주세요.
-
-```bash
-# 1. 프로젝트 클론
-git clone https://github.com/Yanghewon/Portfolio.git
-
-# 2. 프로젝트 폴더로 이동
-cd Portfolio
-
-# 3. index.html 실행 (브라우저에서 열기)
-open index.html
