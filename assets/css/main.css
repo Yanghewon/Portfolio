@@ -2082,18 +2082,23 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
-.button.primary {
-	background-color: #8cc9f0;
-	color: #ffffff !important;
-	box-shadow: none;
+#contact .button.primary {
+	background-color: #f799af !important;
+	color: #fff !important;
+	box-shadow: none !important;
+	border: none !important;
+	transition:
+		background-color 0.3s ease,
+		transform 0.2s ease;
 }
 
 input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
-.button.primary:hover {
-	background-color: #9acff2;
+#contact .button.primary:hover {
+	background-color: #ff6d8f !important;
+	transform: scale(1.05);
 }
 
 input[type="submit"].primary:active,
@@ -3931,156 +3936,145 @@ body.is-preload #header.alt .logo {
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;        /* 높이를 고정 */
-    object-fit: cover;    /* 이미지 비율 유지하며 잘라서 채움 */
-    border-radius: 8px;
-    margin-bottom: 1rem;
+	width: 100%;
+	height: 200px; /* 높이를 고정 */
+	object-fit: cover; /* 이미지 비율 유지하며 잘라서 채움 */
+	border-radius: 8px;
+	margin-bottom: 1rem;
 }
 
 /*아이콘*/
 
 .icons {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 10px; /* 아이콘 간 간격 */
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 10px; /* 아이콘 간 간격 */
 }
 
 .icons li {
-  display: inline-block;
+	display: inline-block;
 }
 
 .icon {
-  display: inline-block;
-  text-align: center;
+	display: inline-block;
+	text-align: center;
 }
 
 .icon-circle {
-  width: 40px; /* 아이콘 크기 */
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid #ccc; /* 흰색 테두리 */
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 40px; /* 아이콘 크기 */
+	height: 40px;
+	border-radius: 50%;
+	background-color: white;
+	border: 2px solid #ccc; /* 흰색 테두리 */
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .icon-circle img {
-  width: 24px; /* 아이콘 크기 */
-  height: 24px;
-  border-radius: 50%; /* 아이콘을 동그랗게 */
+	width: 24px; /* 아이콘 크기 */
+	height: 24px;
+	border-radius: 50%; /* 아이콘을 동그랗게 */
 }
 
+.close-btn {
+	font-size: 1.6em;
+	position: absolute;
+	top: 8px;
+	right: 12px;
+	cursor: pointer; /* ✅ 손 모양 커서 */
+	z-index: 10;
+	transition: transform 0.2s ease;
+}
 
+.close-btn:hover {
+	color: #ff6347;
+	transform: scale(1.1); /* ✅ 호버 시 살짝 커지게 */
+}
 
+.project-card.project-knsa {
+	position: relative;
+	padding-bottom: 3rem;
+}
 
+/* 모달 전체 배경 (기존 유지, fade-in 추가) */
+.email-modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity 0.3s ease,
+		visibility 0s ease 0.3s;
+}
 
+/* 모달 박스 */
+.email-modal-content {
+	background-color: #fff;
+	padding: 40px 30px 30px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	max-width: 400px;
+	width: 80%;
+	font-size: 1.2em;
+	color: #333;
+	position: relative;
+	transform: scale(0.8); /* 초기 크기 줄임 */
+	opacity: 0;
+	transition:
+		transform 0.3s ease,
+		opacity 0.3s ease;
+}
 
+/* 모달이 보이는 상태일 때 애니메이션 */
+.email-modal.show {
+	display: flex;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s ease;
+}
 
+.email-modal.show .email-modal-content {
+	transform: scale(1);
+	opacity: 1;
+}
 
+/* 보러가기 버튼 스타일 */
+.project-btn {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 14px;
+	border-radius: 20px; /* 끝 둥글게 */
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-align: center;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	background-color: #d394e2; /* 포트폴리오 메인톤에 맞춘 파란색 계열 */
+	text-decoration: none;
+	transition:
+		background-color 0.3s ease,
+		transform 0.2s ease;
+}
 
-
-	/* 페이지 전체 스타일 */
-	body {
-		font-family: 'Arial', sans-serif;
-		margin: 0;
-		padding: 0;
-		background-color: #f5f5f5;
-		color: #333;
-	}
-
-	/* 중앙 배치 및 스타일링 */
-	.email-modal {
-		display: none;  /* 모달을 기본적으로 숨깁니다 */
-		position: fixed;
-		z-index: 1000;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);  /* 반투명 배경 */
-		justify-content: center;
-		align-items: center;
-		opacity: 0;  /* 기본적으로 투명 상태 */
-		visibility: hidden;  /* 기본적으로 보이지 않음 */
-		transition: opacity 0.3s ease, visibility 0s ease 0.3s;
-	}
-
-	.email-modal-content {
-		background-color: #fff;
-		padding: 30px;
-		border-radius: 10px;
-		text-align: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		max-width: 400px;
-		width: 80%;
-		font-size: 1.2em;
-		color: #333;
-		position: relative;
-	}
-
-	/* 닫기 버튼 */
-	.close-btn {
-		font-size: 1.5em;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		cursor: pointer;
-	}
-
-	.close-btn:hover {
-		color: #ff6347;
-	}
-
-	/* 버튼 스타일 */
-	.actions.special {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-	}
-
-	.actions.special li {
-		display: inline-block;
-	}
-
-	.button {
-		background-color: #4CAF50;  /* 기본 버튼 색상 */
-		color: white;
-		border: none;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		font-size: 1.2em;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	}
-
-	.button.primary {
-		background-color: #008CBA;  /* Email 버튼 색상 */
-	}
-
-	.button:hover {
-		background-color: #45a049;  /* 버튼에 마우스 오버 시 색상 변화 */
-	}
-
-	.button.primary:hover {
-		background-color: #005f73;  /* Email 버튼 hover 색상 */
-	}
-
-	/* 이메일 내용 중앙 정렬 */
-	.email-text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-	}
-
-	.email-text p {
-		font-size: 1.2em;
-		margin: 0;
-		padding: 0;
-	}
+.project-btn:hover {
+	background-color: #b470b8; /* hover 시 약간 어두운 톤 */
+	transform: scale(1.05);
+}
